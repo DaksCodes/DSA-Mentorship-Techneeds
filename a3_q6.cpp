@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int linearSearch(int n, int num, int arr[])
+{
+    for(int i=0; i<n; i++)
+    {
+        if(arr[i]==num)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+int main()
+{
+    int n,num;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+    cin>>num;
+    int res=linearSearch(n,num,arr);
+    cout<<res;
+    return 0;
+}
